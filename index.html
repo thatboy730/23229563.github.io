@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS for modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe; /* White background */
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Set width of the modal */
+            max-width: 600px; /* Max width for larger screens */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+        }
+
+        .close {
+            color: #aaa; /* Gray text */
+            float: right; /* Align right */
+            font-size: 28px; /* Larger font size */
+            font-weight: bold; /* Bold text */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black; /* Black text on hover/focus */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Style for button */
+        #btnOpenModal {
+            font-size: 1.5em; /* 150% of the default font size */
+            padding: 10px 20px; /* Padding around text */
+            background-color: #4CAF50; /* Green background color */
+            color: white; /* White text color */
+            border: none; /* No border */
+            cursor: pointer; /* Pointer cursor */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        #btnOpenModal:hover {
+            background-color: #45a049; /* Darker green when hovered */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            <div>
+                <a href="index.html" class="logo"><img src="images/logo.png" style="width: 30%; height: auto;" alt=""></a>
+                <ul class="navigation">
+                    <!-- Removed navigation items -->
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <p>こんにちはみんなさん! Welcome to my website!</p>
+            <p>私はクルアブモンコル　テイーワラです。タイのバンコクから来ました。</p>
+            <p>現在、私は東京国際大学でDBIを専攻している1年生です。</p>
+        </div>
+        <div id="body">
+            <div class="featured">
+                <ul>
+                    <li>
+                        <a href="index.html"><img src="images/lads.png" alt="Icon 1"></a>
+                    </li>
+
+                    <li>
+                        <a href="index.html"><img src="images/2.png" alt="Icon 2"></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><img src="images/4.png" alt="Icon 3"></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><img src="images/5.png" alt="Icon 4"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <button style="display: block; margin: 0 auto; padding: 50px 50px; background-color: #d590cc; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 50px;" onclick="openModal()">Interesting Button</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>My student ID is 23229563 and major in DBI</p>
+                <p></p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            // script.js
+
+            // Get the modal element
+            let modal = document.getElementById('myModal');
+
+            // Function to open the modal
+            function openModal() {
+                modal.style.display = 'block';
+            }
+
+            // Function to close the modal
+            function closeModal() {
+                modal.style.display = 'none';
+            }
+        </script>
+        <div id="footer">
+            <div>
+                <ul class="connect">
+                    <li>
+                        <a href="#" class="googleplus" onclick="openFooterModal('Google+'); return false;">&nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="http://www.freewebsitetemplates.com/misc/contact" class="email">&nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="http://www.freewebsitetemplates.com/go/facebook/" class="facebook">&nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="http://www.freewebsitetemplates.com/go/twitter/" class="twitter">&nbsp;</a>
+                    </li>
+                </ul>
+                <div style="text-align: center; margin-top: 20px;">
+                    <p>23229563, Kluabmongkol Teewara</p>
+                </div>
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <p id="modalMessage">Hello! This is a pop-up modal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
